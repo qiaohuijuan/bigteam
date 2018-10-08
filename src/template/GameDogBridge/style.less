@@ -1,0 +1,139 @@
+@unit: 1600/100vw;
+
+.game-dogBridge{
+    width:100%;height:100%;
+    background-size: contain;
+    position: relative;
+    background: url('../../static/images/common/bridge_1.jpg') no-repeat;
+    &.step3{
+        background: url('../../static/images/common/bridge_2.jpg') no-repeat;
+    }
+    canvas{
+        width:100%;height:100%;
+    }
+    .dog-start{
+        width:215/@unit;height:302/@unit;
+        position: absolute;
+        left:100/@unit;top:100/@unit;
+        transition: transform 2s linear;
+        z-index:99;
+        &.move{
+            transform:translateX(1200/@unit);
+        }
+    }
+    .dog-end{
+        width:298/@unit;height:305/@unit;
+        position: absolute;
+        left:1300/@unit;top:100/@unit;
+        z-index:99;
+    }
+    .desc-img{
+        width:187/@unit;height:117/@unit;
+        position: absolute;
+        top:150/@unit;left:715/@unit;
+    }
+    .word-wrap{
+        position: absolute;left:296/@unit;top:415/@unit;
+        width: 1008/@unit;height:194/@unit;line-height: 160/@unit;
+        font-size:100/@unit;color:#fff;font-weight:bold;
+        text-align: center;
+    }
+    .reward{
+        width: 182/@unit;height:159/@unit;
+        background-size: contain;
+        background-image: url(../../static/images/common/reward.png);
+        position: absolute;
+        right:20/@unit;top:155/@unit;
+    }
+    .words-wrap{
+        width:100%;height:100%;
+        position: absolute;left:0;top:0;
+        background-color:rgba(0,0,0,0.6);
+        display:flex;justify-content:space-around;align-items:center;
+        z-index:101;
+        .words-item{
+            width:450/@unit;height:650/@unit;
+            border-radius:60/@unit;overflow: hidden;
+            background-color: #fff;
+            .top{
+                height:400/@unit;
+                background-color: #ccc;
+                background-size: cover;
+                background-position:center center;
+            }
+            .bottom{
+                height:250/@unit;text-align:center;
+                padding-top:30/@unit;font-weight:bold;
+                .eng{
+                    font-size:72/@unit;color:#000;
+                }
+                .chi{
+                    font-size: 45/@unit;color:#808080;
+                }
+            }
+        }
+    }
+    .letters-wrap{
+        width: 1090/@unit;height:202/@unit;
+        position: absolute;left:255/@unit;bottom:40/@unit;
+        // display: flex;justify-content: space-between;align-items:center;
+        .letter-item{
+            position: absolute;bottom:253/@unit;
+            width:202/@unit;height:202/@unit;
+            font-size:100/@unit;color:#fff;font-weight: bold;
+            text-align: center;line-height: 190/@unit;
+            transition: transform 0.3s linear;
+            .letter-box{
+                width:100%;height:100%;
+                background-size: contain;
+                background-image: url(../../static/images/common/block.png);
+            }
+            &.animated{
+                z-index:110;
+            }
+            &:nth-child(1){
+                left:41/@unit;
+            }
+            &:nth-child(2){
+                left:243/@unit;
+            }
+            &:nth-child(3){
+                left:445/@unit;
+            }
+            &:nth-child(4){
+                left:647/@unit;
+            }
+            &:nth-child(5){
+                left:849/@unit;
+            }
+        }
+    }
+    .light{
+        position: absolute;
+        top:0;left:0;
+        z-index:100;
+    }
+    .game-pre{
+        position: absolute;left:0;top:0;
+        height:100%;width:100%;
+        z-index:101;
+        &.hide{display:none}
+        >div{
+            position: absolute;
+            height:100%;width:100%;
+            background-size: contain;
+            background-position: left top;
+            transition: transform 1.5s linear;
+            background-repeat: no-repeat;
+        }
+        .left-half{
+            background-image: url(../../static/images/common/left-half.png);
+            &.active{transform: translateX(-100%);}
+        }
+        .right-half{
+            background-image: url(../../static/images/common/right-half.png);
+            &.active{transform: translateX(100%);}
+        }
+    }
+}
+

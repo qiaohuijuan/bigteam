@@ -1,0 +1,53 @@
+@unit: 1920/100vw;
+.prepare-tpl {
+    width: 100%;
+    height: 100%;
+    background: url('../../static/images/common/e1_1.jpg') no-repeat;
+    background-size: contain;
+    .prepare-text,
+    .prepare-desc {
+        font-size: 90 / @unit;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+    }
+    .prepare-text {
+        margin-top: 20 / @unit;
+    }
+    .prepare-desc {
+        font-size: 65 / @unit;
+        margin-top: 30 / @unit;
+    }
+    .section {
+        width: 374 / @unit;
+        height: 374 / @unit;
+        background: url('../../static/images/common/prepare_btn.png') no-repeat;
+        background-size: 788 / @unit auto;
+        border-radius: 50%;
+        position: absolute;
+        top: 370 / @unit;
+        cursor: pointer;
+    }
+    .study::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .section1 {
+        background-position: -404 / @unit -10 / @unit;
+        left: 350 / @unit;
+        &.btn-down {
+            background-position: -404 / @unit -404 / @unit;
+        }
+    }
+    .section2 {
+        background-position: -10 / @unit -404 / @unit;
+        left: 1200 / @unit;
+        &.btn-down {
+            background-position: -10 / @unit -10 / @unit;
+        }
+    }
+}

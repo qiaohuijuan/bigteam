@@ -1,0 +1,54 @@
+html,
+body {
+    font-family: 'sy', 'Calibri', 'arial', 'PingFang SC', 'Microsoft YaHei';
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: hidden;
+}
+img {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+.container {
+    max-width: 100%;
+    width: 100vw;
+    height: 100vw/16 * 9;
+    position: absolute;
+    left: 0;
+    top: 0;
+    // top: 0;
+    // bottom: 0;
+    // margin: auto 0;
+    overflow: hidden;
+    > div:first-child {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        overflow: hidden;
+    }
+}
+.hide {
+    display: none !important;
+}
+
+//自定义字体
+@font-face {
+    font-family: '04B_24';
+    src: url('../../static/fonts/04B_24.woff') format('woff'),
+        url('../../static/fonts/04B_24.TTF') format('truetype'); /*non-IE*/
+}
+@font-face {
+    font-family: 'sy';
+    src: url('../../static/fonts/sy.woff') format('woff'),
+        url('../../static/fonts/sy.TTF') format('truetype'); /*non-IE*/
+}
